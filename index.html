@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="INDUS Terrace & Bar — Fusion indienne & congolaise sur terrasse lounge au cœur de Gombe, Kinshasa. Réservez votre table.">
+  <title>INDUS Terrace & Bar | Lounge & Terrasse — Kinshasa, Gombe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --jungle: #1B4332;
+      --jungle-light: #2D6A4F;
+      --copper: #C9933A;
+      --copper-light: #E0B060;
+      --cream: #FAF7F2;
+      --black: #111111;
+      --black-soft: #2a2a2a;
+      --shadow: 0 8px 40px rgba(17, 17, 17, 0.12);
+      --shadow-lg: 0 20px 60px rgba(17, 17, 17, 0.2);
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --nav-height: 80px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--copper);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      color: var(--jungle);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--black-soft);
+      max-width: 640px;
+      font-weight: 300;
+    }
+
+    /* ========== NAVIGATION ========== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(27, 67, 50, 0.97);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .nav__logo-icon {
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--copper);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--copper);
+      background: rgba(255, 255, 255, 0.08);
+      letter-spacing: -0.02em;
+    }
+
+    .nav__logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--cream);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .nav__logo-text span {
+      display: block;
+      font-size: 0.6rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper-light);
+    }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav__links a {
+      color: var(--cream);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--copper);
+      transition: width var(--transition);
+    }
+
+    .nav__links a:hover::after {
+      width: 100%;
+    }
+
+    .nav__cta {
+      background: var(--copper) !important;
+      color: var(--black) !important;
+      padding: 0.55rem 1.2rem !important;
+      border-radius: 4px;
+      font-weight: 600 !important;
+    }
+
+    .nav__cta::after {
+      display: none !important;
+    }
+
+    .nav__cta:hover {
+      background: var(--copper-light) !important;
+    }
+
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .nav__toggle span {
+      width: 26px;
+      height: 2px;
+      background: var(--cream);
+      transition: var(--transition);
+    }
+
+    .nav__toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav__toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: var(--nav-height);
+      background: rgba(27, 67, 50, 0.98);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform var(--transition);
+    }
+
+    .nav__mobile.open {
+      transform: translateX(0);
+    }
+
+    .nav__mobile a {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--black);
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80') center/cover no-repeat;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(17, 17, 17, 0.75) 0%,
+        rgba(27, 67, 50, 0.65) 45%,
+        rgba(17, 17, 17, 0.8) 100%
+      );
+    }
+
+    .hero__foliage {
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      background: radial-gradient(ellipse at 10% 90%, #2D6A4F 0%, transparent 50%),
+                  radial-gradient(ellipse at 90% 20%, #1B4332 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: calc(var(--nav-height) + 2rem) 1.5rem 4rem;
+      max-width: 920px;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--copper-light);
+      border: 1px solid rgba(201, 147, 58, 0.5);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .hero__title {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      color: var(--cream);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero__subtitle-en {
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: rgba(250, 247, 242, 0.65);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .hero__tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      color: var(--copper-light);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .hero__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.95rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn--primary {
+      background: var(--copper);
+      color: var(--black);
+    }
+
+    .btn--primary:hover {
+      background: var(--copper-light);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--cream);
+      border: 2px solid rgba(250, 247, 242, 0.7);
+    }
+
+    .btn--outline:hover {
+      background: var(--cream);
+      color: var(--jungle);
+    }
+
+    .btn--whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+
+    .btn--whatsapp:hover {
+      background: #1ebe57;
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--copper);
+      font-size: 1.4rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      padding: 6rem 0;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2.5rem;
+    }
+
+    .about__image {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about__image img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .about__image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 3px solid var(--copper);
+      border-radius: 8px;
+      margin: 1rem;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .about__lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--jungle);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .about__text {
+      color: var(--black-soft);
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .value-card {
+      background: #fff;
+      padding: 1.25rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--copper);
+      box-shadow: var(--shadow);
+      transition: transform var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .value-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card h4 {
+      font-size: 1.1rem;
+      color: var(--jungle);
+      margin-bottom: 0.25rem;
+    }
+
+    .value-card p {
+      font-size: 0.85rem;
+      color: var(--black-soft);
+      font-weight: 300;
+    }
+
+    /* ========== MENU ========== */
+    .menu-section {
+      padding: 6rem 0;
+      background: var(--jungle);
+      color: var(--cream);
+    }
+
+    .menu-section .section-title {
+      color: var(--cream);
+    }
+
+    .menu-section .section-subtitle {
+      color: rgba(250, 247, 242, 0.75);
+    }
+
+    .menu__tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2.5rem 0 2rem;
+      justify-content: center;
+    }
+
+    .menu__tab {
+      background: transparent;
+      border: 1px solid rgba(201, 147, 58, 0.5);
+      color: var(--cream);
+      padding: 0.6rem 1.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .menu__tab:hover,
+    .menu__tab.active {
+      background: var(--copper);
+      border-color: var(--copper);
+      color: var(--black);
+    }
+
+    .menu__category {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .menu__category.active {
+      display: block;
+    }
+
+    .menu__cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      color: var(--copper-light);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(250, 247, 242, 0.12);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .menu-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-item__info h4 {
+      font-size: 1.15rem;
+      color: var(--cream);
+      margin-bottom: 0.2rem;
+    }
+
+    .menu-item__info p {
+      font-size: 0.85rem;
+      color: rgba(250, 247, 242, 0.6);
+      font-weight: 300;
+    }
+
+    .menu-item__price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--copper);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .menu__note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: rgba(250, 247, 242, 0.5);
+      font-style: italic;
+    }
+
+    /* ========== TERRASSE ========== */
+    .terrasse {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+
+    .terrasse__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .terrasse__header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    .terrasse__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--jungle);
+      color: var(--cream);
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 0.75rem;
+    }
+
+    .mosaic__item {
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mosaic__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .mosaic__item:hover img {
+      transform: scale(1.08);
+    }
+
+    .mosaic__item--large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .mosaic__item--wide {
+      grid-column: span 2;
+    }
+
+    .mosaic__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(transparent, rgba(17, 17, 17, 0.8));
+      color: var(--cream);
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .mosaic__item:hover .mosaic__caption {
+      opacity: 1;
+    }
+
+    /* ========== EVENTS ========== */
+    .events {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--black) 0%, var(--jungle) 100%);
+      color: var(--cream);
+    }
+
+    .events__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+
+    .events__features {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .events__features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      color: rgba(250, 247, 242, 0.85);
+    }
+
+    .events__features i {
+      color: var(--copper);
+      margin-top: 0.25rem;
+    }
+
+    .events .section-title {
+      color: var(--cream);
+    }
+
+    .form-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(201, 147, 58, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .form-card h3 {
+      font-size: 1.5rem;
+      color: var(--copper-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(250, 247, 242, 0.7);
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(250, 247, 242, 0.2);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--copper);
+    }
+
+    .form-group select option {
+      background: var(--jungle);
+      color: var(--cream);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-success i {
+      font-size: 3rem;
+      color: var(--copper);
+      margin-bottom: 1rem;
+    }
+
+    /* ========== RESERVATION ========== */
+    .reservation {
+      position: relative;
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+
+    .reservation__bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .reservation__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(27, 67, 50, 0.88);
+    }
+
+    .reservation .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .reservation__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .reservation__intro .section-title {
+      color: var(--cream);
+    }
+
+    .reservation__hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      color: var(--copper-light);
+      font-style: italic;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .reservation__intro p {
+      color: rgba(250, 247, 242, 0.8);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .reservation .form-card {
+      background: var(--cream);
+      border: none;
+      color: var(--black);
+    }
+
+    .reservation .form-card h3 {
+      color: var(--jungle);
+    }
+
+    .reservation .form-group label {
+      color: var(--black-soft);
+    }
+
+    .reservation .form-group input,
+    .reservation .form-group select,
+    .reservation .form-group textarea {
+      background: #fff;
+      border-color: #ddd;
+      color: var(--black);
+    }
+
+    .reservation .form-group select option {
+      background: #fff;
+      color: var(--black);
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      padding: 6rem 0;
+      background: var(--cream);
+    }
+
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+
+    .contact__cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition);
+    }
+
+    .contact-card:hover {
+      transform: translateX(4px);
+    }
+
+    .contact-card__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--jungle);
+      color: var(--copper);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card h4 {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 0.25rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      font-size: 0.95rem;
+      color: var(--black-soft);
+      font-weight: 400;
+    }
+
+    .contact-card a:hover {
+      color: var(--jungle);
+    }
+
+    .contact__social {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact__social a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--jungle);
+      color: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .contact__social a:hover {
+      background: var(--copper);
+      color: var(--black);
+      transform: translateY(-3px);
+    }
+
+    .contact__map {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      min-height: 420px;
+    }
+
+    .contact__map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+    }
+
+    .hours-badge {
+      display: inline-block;
+      background: rgba(27, 67, 50, 0.1);
+      color: var(--jungle);
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    .hours-badge.closed {
+      background: rgba(201, 147, 58, 0.15);
+      color: #8B5A00;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--black);
+      color: rgba(250, 247, 242, 0.7);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer__brand .nav__logo-text {
+      margin-bottom: 1rem;
+    }
+
+    .footer__brand p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 320px;
+    }
+
+    .footer__col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .footer__col ul {
+      list-style: none;
+    }
+
+    .footer__col li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer__col a {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    .footer__col a:hover {
+      color: var(--copper-light);
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 0.65rem;
+    }
+
+    .footer__social a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(201, 147, 58, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--copper);
+      transition: var(--transition);
+    }
+
+    .footer__social a:hover {
+      background: var(--copper);
+      color: var(--black);
+      border-color: var(--copper);
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(250, 247, 242, 0.1);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    /* ========== FLOATING BUTTONS ========== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 5.5rem;
+      right: 1.5rem;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+      z-index: 900;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.55);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      background: var(--jungle);
+      color: var(--copper);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: var(--transition);
+      z-index: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--copper);
+      color: var(--black);
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      .about__grid,
+      .events__grid,
+      .reservation__grid,
+      .contact__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+
+      .mosaic__item--large,
+      .mosaic__item--wide {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .mosaic__item,
+      .mosaic__item--large {
+        height: 200px;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links {
+        display: none;
+      }
+
+      .nav__toggle {
+        display: flex;
+      }
+
+      .nav__mobile {
+        display: flex;
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+      }
+
+      .about__image img {
+        height: 320px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reservation__bg {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#accueil" class="nav__logo">
+        <div class="nav__logo-icon">IN</div>
+        <div class="nav__logo-text">
+          INDUS Terrace & Bar
+          <span>Lounge & Terrasse · Gombe</span>
+        </div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#terrasse">Terrasse</a></li>
+        <li><a href="#evenements">Événements</a></li>
+        <li><a href="#reservation" class="nav__cta">Réserver</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#menu">Menu</a>
+    <a href="#terrasse">Terrasse</a>
+    <a href="#evenements">Événements</a>
+    <a href="#reservation">Réserver</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="accueil">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__foliage"></div>
+    <div class="hero__content fade-in">
+      <div class="hero__badge">
+        <i class="fas fa-leaf"></i> Gombe · Kinshasa · Fusion Inde & Congo
+      </div>
+      <h1 class="hero__title">INDUS Terrace & Bar</h1>
+      <p class="hero__subtitle-en">Discover the best authentic Indian and Congolese food in Kinshasa</p>
+      <p class="hero__tagline">« Où chaque plat raconte une histoire »</p>
+      <div class="hero__buttons">
+        <a href="#reservation" class="btn btn--primary">
+          <i class="fas fa-calendar-check"></i> Réserver une table
+        </a>
+        <a href="#menu" class="btn btn--outline">
+          <i class="fas fa-utensils"></i> Voir le menu
+        </a>
+      </div>
+    </div>
+    <a href="#apropos" class="hero__scroll" aria-label="Défiler">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- À propos -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <span class="section-label fade-in">Notre histoire</span>
+      <h2 class="section-title fade-in">L'Inde rencontre le Congo</h2>
+      <div class="about__grid">
+        <div class="about__image fade-in-left">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Terrasse INDUS au coucher du soleil">
+        </div>
+        <div class="fade-in">
+          <p class="about__lead">« À Kinshasa, il existe un endroit où les épices de l'Inde rencontrent les saveurs du Congo — bienvenue à INDUS. »</p>
+          <p class="about__text">
+            INDUS Terrace & Bar — également connu sous le nom INDUS Lounge & Terrasse — est un espace unique au cœur de Gombe qui fusionne la richesse des saveurs indiennes et la générosité de la cuisine congolaise, dans un cadre de terrasse moderne et lounge en plein air.
+          </p>
+          <p class="about__text">
+            Urban chic et tropical : loin du restaurant indien classique, INDUS propose une expérience Instagram-worthy — guirlandes dorées, feuillage verdoyant, cocktails créatifs et une atmosphère idéale pour dîners romantiques, sorties entre amis ou afterworks.
+          </p>
+          <div class="values">
+            <div class="value-card fade-in">
+              <div class="value-card__icon">🌿</div>
+              <h4>Saveurs authentiques</h4>
+              <p>Fusion indienne & congolaise, préparée avec passion et épices sélectionnées.</p>
+            </div>
+            <div class="value-card fade-in">
+              <div class="value-card__icon">🍹</div>
+              <h4>Bar créatif</h4>
+              <p>Cocktails signature, vins et jus tropicaux frais pour chaque moment.</p>
+            </div>
+            <div class="value-card fade-in">
+              <div class="value-card__icon">🌅</div>
+              <h4>Terrasse unique</h4>
+              <p>Le seul lounge-terrasse à Kinshasa mêlant ces deux cultures gastronomiques.</p>
+            </div>
+            <div class="value-card fade-in">
+              <div class="value-card__icon">🎶</div>
+              <h4>Ambiance lounge</h4>
+              <p>Soirées décontractées, élégantes — là où les moments comptent vraiment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-label fade-in">Notre carte</span>
+        <h2 class="section-title fade-in">Menu</h2>
+        <p class="section-subtitle fade-in" style="margin: 0 auto;">
+          Une sélection de plats fusion, du tandoor au moambé — accompagnés de créations du bar. Prix indicatifs en USD ($$).
+        </p>
+      </div>
+
+      <div class="menu__tabs fade-in">
+        <button class="menu__tab active" data-tab="entrees">Entrées</button>
+        <button class="menu__tab" data-tab="indien">Spécialités Indiennes</button>
+        <button class="menu__tab" data-tab="congolais">Spécialités Congolaises</button>
+        <button class="menu__tab" data-tab="bar">Lounge / Bar</button>
+        <button class="menu__tab" data-tab="desserts">Desserts</button>
+      </div>
+
+      <div class="menu__category active" id="entrees">
+        <p class="menu__cat-title">Entrées</p>
+        <div class="menu-item"><div class="menu-item__info"><h4>Samosas croustillants</h4><p>Légumes épicés ou viande hachée — chutney maison</p></div><span class="menu-item__price">$8</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Pakoras d'oignons épicés</h4><p>Beignets croustillants, sauce tamarin</p></div><span class="menu-item__price">$7</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Brochettes de poulet tandoori</h4><p>Marinade yaourt & épices, four tandoor</p></div><span class="menu-item__price">$12</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Salade de mango verde</h4><p>Mangue verte, coriandre, piment doux</p></div><span class="menu-item__price">$9</span></div>
+      </div>
+
+      <div class="menu__category" id="indien">
+        <p class="menu__cat-title">Spécialités Indiennes</p>
+        <div class="menu-item"><div class="menu-item__info"><h4>Butter Chicken</h4><p>Sauce tomate crémeuse aux épices douces</p></div><span class="menu-item__price">$18</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Agneau Rogan Josh</h4><p>Curry du Cachemire, cardamome & safran</p></div><span class="menu-item__price">$22</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Dal Makhani</h4><p>Lentilles noires mijotées toute la nuit</p></div><span class="menu-item__price">$14</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Palak Paneer</h4><p>Fromage frais aux épinards & crème</p></div><span class="menu-item__price">$15</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Biryani royal</h4><p>Poulet ou agneau, riz basmati parfumé</p></div><span class="menu-item__price">$20</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Naans</h4><p>Nature, beurre, ail ou fromage</p></div><span class="menu-item__price">$4–6</span></div>
+      </div>
+
+      <div class="menu__category" id="congolais">
+        <p class="menu__cat-title">Spécialités Congolaises</p>
+        <div class="menu-item"><div class="menu-item__info"><h4>Poulet moambé</h4><p>Sauce palme traditionnelle, riz blanc</p></div><span class="menu-item__price">$19</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Poisson grillé sauce tshombo</h4><p>Capitaine frais, légumes de saison</p></div><span class="menu-item__price">$24</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Saka-saka aux crevettes</h4><p>Feuilles de manioc, sauce tomate & épices</p></div><span class="menu-item__price">$17</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Brochettes de chèvre grillées</h4><p>Marinade citron & piment, accompagnement</p></div><span class="menu-item__price">$16</span></div>
+      </div>
+
+      <div class="menu__category" id="bar">
+        <p class="menu__cat-title">Du Lounge / Bar</p>
+        <div class="menu-item"><div class="menu-item__info"><h4>Mango Spice</h4><p>Cocktail signature INDUS — mangue & épices</p></div><span class="menu-item__price">$10</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Congo Sunset</h4><p>Rhum, fruit de la passion, sirop de bissap</p></div><span class="menu-item__price">$11</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Ginger Mojito</h4><p>Menthe fraîche, gingembre, citron vert</p></div><span class="menu-item__price">$9</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Bières locales & internationales</h4><p>Sélection fraîche au bar</p></div><span class="menu-item__price">$5–8</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Vins sélectionnés</h4><p>Rouges, blancs & rosés — verre ou bouteille</p></div><span class="menu-item__price">$8+</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Jus tropicaux frais</h4><p>Mangue, maracuja, bissap pressés</p></div><span class="menu-item__price">$6</span></div>
+      </div>
+
+      <div class="menu__category" id="desserts">
+        <p class="menu__cat-title">Desserts</p>
+        <div class="menu-item"><div class="menu-item__info"><h4>Gulab Jamun</h4><p>Boules de lait au sirop de rose</p></div><span class="menu-item__price">$7</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Tarte bananes plantains caramélisées</h4><p>Fusion locale, crème vanille</p></div><span class="menu-item__price">$8</span></div>
+        <div class="menu-item"><div class="menu-item__info"><h4>Crème glacée à la cardamome</h4><p>Maison, noix de cajou croquantes</p></div><span class="menu-item__price">$6</span></div>
+      </div>
+
+      <p class="menu__note fade-in">* Prix indicatifs. La carte peut varier selon la saison et les arrivages du marché.</p>
+    </div>
+  </section>
+
+  <!-- Terrasse -->
+  <section class="terrasse" id="terrasse">
+    <div class="container">
+      <div class="terrasse__header fade-in">
+        <span class="section-label">L'espace</span>
+        <h2 class="section-title">Terrasse & Ambiance</h2>
+        <p class="section-subtitle">
+          Une terrasse pensée pour les moments qui comptent — dîners intimes, afterworks entre collègues, soirées mémorables sous les lumières dorées de Gombe.
+        </p>
+        <div class="terrasse__badge">
+          <i class="fas fa-umbrella-beach"></i> Outdoor Seating Available
+        </div>
+      </div>
+
+      <div class="mosaic fade-in">
+        <div class="mosaic__item mosaic__item--large">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=80" alt="Terrasse extérieure INDUS">
+          <span class="mosaic__caption">Notre terrasse au crépuscule</span>
+        </div>
+        <div class="mosaic__item">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80" alt="Cocktails signature">
+          <span class="mosaic__caption">Bar créatif</span>
+        </div>
+        <div class="mosaic__item">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" alt="Plats fusion">
+          <span class="mosaic__caption">Fusion Inde–Congo</span>
+        </div>
+        <div class="mosaic__item mosaic__item--wide">
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80" alt="Ambiance nocturne lounge">
+          <span class="mosaic__caption">Soirées lounge</span>
+        </div>
+        <div class="mosaic__item">
+          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=600&q=80" alt="Table dressée">
+          <span class="mosaic__caption">Dîners romantiques</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Événements -->
+  <section class="events" id="evenements">
+    <div class="container">
+      <span class="section-label fade-in">Privatisation</span>
+      <h2 class="section-title fade-in">Événements & Privatisation</h2>
+      <div class="events__grid">
+        <div class="fade-in">
+          <p style="color: rgba(250,247,242,0.85); font-weight: 300; margin-bottom: 1rem;">
+            Anniversaires, soirées corporate, dîners de groupe — INDUS Terrace & Bar accueille vos événements privés dans un cadre exceptionnel. Terrasse, bar et cuisine sur mesure pour une soirée inoubliable à Kinshasa.
+          </p>
+          <ul class="events__features">
+            <li><i class="fas fa-check-circle"></i> Espace terrasse privatisable</li>
+            <li><i class="fas fa-check-circle"></i> Menus groupes personnalisés (fusion Inde–Congo)</li>
+            <li><i class="fas fa-check-circle"></i> Bar & cocktails signature pour vos invités</li>
+            <li><i class="fas fa-check-circle"></i> Équipe dédiée à l'organisation</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary" style="margin-top: 1.5rem;">
+            <i class="fas fa-envelope"></i> Contactez-nous pour organiser votre événement
+          </a>
+        </div>
+        <div class="form-card fade-in" id="eventFormWrap">
+          <h3>Demande de privatisation</h3>
+          <form id="eventForm">
+            <div class="form-group">
+              <label for="eventName">Nom complet</label>
+              <input type="text" id="eventName" name="name" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+              <label for="eventPhone">Téléphone</label>
+              <input type="tel" id="eventPhone" name="phone" required placeholder="+243 ...">
+            </div>
+            <div class="form-group">
+              <label for="eventType">Type d'événement</label>
+              <select id="eventType" name="type" required>
+                <option value="">Sélectionner...</option>
+                <option>Anniversaire</option>
+                <option>Soirée corporate</option>
+                <option>Dîner de groupe</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="eventGuests">Nombre de personnes</label>
+                <input type="number" id="eventGuests" name="guests" min="5" max="200" required placeholder="Ex. 30">
+              </div>
+              <div class="form-group">
+                <label for="eventDate">Date souhaitée</label>
+                <input type="date" id="eventDate" name="date" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+              Envoyer la demande
+            </button>
+          </form>
+          <div class="form-success" id="eventSuccess">
+            <i class="fas fa-check-circle"></i>
+            <h3 style="color: var(--cream); margin-bottom: 0.5rem;">Demande envoyée !</h3>
+            <p style="color: rgba(250,247,242,0.8);">Notre équipe vous contactera sous peu pour finaliser votre événement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Réservation -->
+  <section class="reservation" id="reservation">
+    <div class="reservation__bg"></div>
+    <div class="reservation__overlay"></div>
+    <div class="container">
+      <div class="reservation__grid">
+        <div class="reservation__intro fade-in">
+          <span class="section-label" style="color: var(--copper-light);">Réservation</span>
+          <h2 class="section-title">Réservez votre table</h2>
+          <p class="reservation__hook">« À Indus, chaque dîner mérite une coupe ! »</p>
+          <p>
+            Terrasse, lounge ou salle — indiquez-nous vos préférences. Pour une confirmation rapide, contactez-nous aussi sur WhatsApp.
+          </p>
+          <a href="https://wa.me/243818554749?text=Bonjour%20INDUS%2C%20je%20souhaite%20r%C3%A9server%20une%20table." class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Réserver via WhatsApp
+          </a>
+        </div>
+        <div class="form-card fade-in" id="bookingFormWrap">
+          <h3>Formulaire de réservation</h3>
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="bookName">Nom complet</label>
+              <input type="text" id="bookName" name="name" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookPhone">Téléphone</label>
+                <input type="tel" id="bookPhone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="bookEmail">Email</label>
+                <input type="email" id="bookEmail" name="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookDate">Date</label>
+                <input type="date" id="bookDate" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="bookTime">Heure</label>
+                <input type="time" id="bookTime" name="time" min="12:00" max="22:30" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="bookGuests">Nombre de convives</label>
+              <input type="number" id="bookGuests" name="guests" min="1" max="30" required>
+            </div>
+            <div class="form-group">
+              <label for="bookOccasion">Occasion spéciale ?</label>
+              <input type="text" id="bookOccasion" name="occasion" placeholder="Anniversaire, dîner romantique...">
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-calendar-check"></i> Confirmer la réservation
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <h3 style="color: var(--jungle);">Réservation reçue !</h3>
+            <p style="color: var(--black-soft);">Nous vous confirmerons par téléphone ou email dans les plus brefs délais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="section-label fade-in">Nous trouver</span>
+      <h2 class="section-title fade-in">Contact & Localisation</h2>
+      <div class="contact__grid">
+        <div class="fade-in">
+          <div class="contact__cards">
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Adresse</h4>
+                <p>34, Avenue Colonel Ebeya<br>Gombe, Kinshasa, RDC</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Téléphone</h4>
+                <p>
+                  <a href="tel:+243818554749">+243 818 554 749</a><br>
+                  <a href="tel:+243899804866">+243 899 804 866</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:induskinshasa25@gmail.com">induskinshasa25@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Horaires</h4>
+                <p>Mercredi – Lundi · 12h00 – 23h00</p>
+                <span class="hours-badge closed">Fermé le mardi</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact__social">
+            <a href="https://wa.me/243818554749" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/induskinshasa" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+243818554749" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+            <a href="mailto:induskinshasa25@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="contact__map fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.42!2d15.301!3d-4.304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a33c8e8e8e8e8%3A0x0!2sGombe%2C%20Kinshasa%2C%20R%C3%A9publique%20d%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2scd!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="INDUS Terrace & Bar — Gombe, Kinshasa">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo-text">INDUS Terrace & Bar</div>
+          <p>Où chaque plat raconte une histoire — fusion indienne & congolaise sur terrasse lounge au cœur de Gombe.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#terrasse">Terrasse</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#reservation">Réservation</a></li>
+            <li><a href="#evenements">Événements</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Suivez-nous</h4>
+          <div class="footer__social">
+            <a href="https://instagram.com/induskinshasa" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/243818554749" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 INDUS Terrace & Bar | Kinshasa, RDC — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/243818554749?text=Bonjour%20INDUS%2C%20j%27aimerais%20avoir%20des%20informations." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMobile.classList.toggle('open');
+      document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.nav__mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMobile.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    const tabs = document.querySelectorAll('.menu__tab');
+    const categories = document.querySelectorAll('.menu__category');
+
+    function showMenuItems(container) {
+      container?.querySelectorAll('.menu-item').forEach((item, i) => {
+        item.classList.remove('visible');
+        setTimeout(() => item.classList.add('visible'), 50 * i);
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        categories.forEach(cat => {
+          cat.classList.toggle('active', cat.id === target);
+        });
+        showMenuItems(document.getElementById(target));
+      });
+    });
+
+    showMenuItems(document.getElementById('entrees'));
+
+    const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { root: null, rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+
+    fadeElements.forEach(el => fadeObserver.observe(el));
+    document.querySelector('.hero .fade-in')?.classList.add('visible');
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const bookingForm = document.getElementById('bookingForm');
+    const formSuccess = document.getElementById('formSuccess');
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      bookingForm.style.display = 'none';
+      formSuccess.style.display = 'block';
+    });
+
+    const eventForm = document.getElementById('eventForm');
+    const eventSuccess = document.getElementById('eventSuccess');
+    eventForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      eventForm.style.display = 'none';
+      eventSuccess.style.display = 'block';
+    });
+
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('bookDate').setAttribute('min', today);
+    document.getElementById('eventDate').setAttribute('min', today);
+  </script>
+</body>
+</html>
